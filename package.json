@@ -1,0 +1,19 @@
+
+
+{
+  "name": "language-Y86-64",
+  "version": "0.0.0",
+  "description": "Y86-64 assembly support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wolf-tickets/atom-Y86-syntax"
+  },
+  "bugs": {
+    "url": "https://github.com/wolf-tickets/atom-Y86-syntax/issues"
+  },
+  "license": "MIT"
+}
