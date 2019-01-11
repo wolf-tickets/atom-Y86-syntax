@@ -1,0 +1,26 @@
+.align
+.quad
+.long
+halt
+jmp
+addq
+subq
+
+irmovq
+rrmovq
+cmovle
+fdsf
+pushq
+%rsp
+alsdflsad:
+%rsp
+.byte
+ sds sd
+
+
+call     dfg dfg dfg
+call
+call
+
+
+ret

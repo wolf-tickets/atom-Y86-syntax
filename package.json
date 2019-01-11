@@ -8,7 +8,7 @@
     "atom": "*"
   },
   "keywords": [
-    "y86","y86-64","ubc"",syntax"
+    "y86","y86-64","ubc","syntax"
   ],
   "dependencies": {},
   "repository": {

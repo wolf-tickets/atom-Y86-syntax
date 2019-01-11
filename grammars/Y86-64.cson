@@ -4,13 +4,14 @@ name: 'Y86-64 Assembly (UBC implementation)'
 
 fileTypes: ['ys']
 
-firstLineMatch: ''
+firstLineMatch: '\.(pos|align)'
 
 foldingStartMarker: ''
 
 foldingStopMarker: ''
 
 patterns: [
+
   {
     begin: '#'
     end: '$'
@@ -18,53 +19,58 @@ patterns: [
   },
 
   {
-    match: /%(r|e)((a|c|d|b)x|((s|b)p)|((s|d)i)|(8|9|1[0-4]))/
-    name: 'variable.language.register.y86-64-ubc'
+    match: '^%(r|e)((a|c|d|b)x|((s|b)p)|((s|d)i)|(8|9|1[0-4]))( *)'
+    name: 'string.register.y86-64-ubc'
   },
 
   {
-    match: /(add|sub|and|xor|mul|div|mod)q/
+    match: '^(add|sub|and|xor|mul|div|mod)q( *)'
     name: 'keyword.operator.arithmetic.y86-64-ubc'
   },
 
   {
-    match: /jmp/
+    match: '^jmp( *)'
     name: 'keyword.control.jump.unconditional.y86-64-ubc'
   },
 
   {
-      match: /j(((l|g)e?)|n?e)/
-      name: 'keyword.control.jump.conditional.y86-64-ubc'
+    match: '^j(((l|g)e?)|n?e)'
+    name: 'keyword.control.jump.conditional.y86-64-ubc'
   },
+
   {
-    match: /cmov(((l|g)e?)|n?e)/
+    match: '^cmov(((l|g)e?)|n?e)( *)'
     name: 'keyword.other.move.conditional.y86-64-ubc'
   },
-  
+
   {
-    match: /(rm|mr|rr|ir)movq/
+    match: '^(rm|mr|rr|ir)movq( *)'
     name: 'keyword.other.move.unconditional.y86-64-ubc'
   },
 
   {
-    match: /call|ret|halt|nop/
+    match: '(call|ret|halt|nop)( *)'
     name: 'support.function.y86-64-ubc'
   },
 
   {
-    match: /(push|pop)q/
-    name: 'support.other.stack.y86-64-ubc'
+    match: '^(push|pop)q( *)'
+    name: 'support.function.stack.y86-64-ubc'
+  },
+
+  {
+    match: '^\.(quad|long|byte)( *)'
+    name: 'variable.language.directive.length.y86-64-ubc'
+  },
+
+  {
+    match: '^\.(pos|align)( *)'
+    name: 'variable.language.directive.position.y86-64-ubc'
   }
 
+  {
+    match: '^(.+):( *)'
+    name: 'variable.language.directive.label.y86-64-ubc'
+  }
 
 ]
-repository: # An array of rules. If you're going to be referencing one bit of code over and over again, stick it here so that you can edit all in one place.
-  ruleName: # Can be anything.
-    {
-      name: ''
-      match: ''
-      end: ''
-      endCaptures:
-        0:
-          name: ''
-    }
