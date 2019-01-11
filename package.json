@@ -1,12 +1,15 @@
 
 
 {
-  "name": "language-Y86-64",
+  "name": "language-Y86-64-ubc",
   "version": "0.0.0",
-  "description": "Y86-64 assembly support in Atom",
+  "description": "Support for Y86-64 assembly (UBC CS implementation) in Atom",
   "engines": {
     "atom": "*"
   },
+  "keywords": [
+    "y86","y86-64","ubc"",syntax"
+  ],
   "dependencies": {},
   "repository": {
     "type": "git",
