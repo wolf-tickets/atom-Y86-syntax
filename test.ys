@@ -4,7 +4,9 @@
 halt
 jmp
 addq
-subq
+jmp
+jlejlejljlljll
+subq    sdfs  sdfad asdf af
 
 irmovq
 rrmovq
@@ -14,6 +16,8 @@ pushq
 %rsp
 alsdflsad:
 %rsp
+asd:
+
 .byte
  sds sd
 
